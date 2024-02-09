@@ -24,3 +24,5 @@ console.log(`O resultado do exercicio 4 ` + typeof(semValor))
 
 const soma = semValor + numero2148
 console.log(`Minha segunda variável vale ${semValor} o valor da soma das minhas duas variáveis é ${soma}`)
+
+// -Eleve a sua segunda variável ao quadrado e imprima esse resultado na tela. Após isso, divida esse resultado por 3 e coloque-o na tela novamente.
