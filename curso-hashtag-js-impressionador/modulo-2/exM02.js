@@ -1,4 +1,4 @@
-
+console.log('=================== Exercicio 1 ===============')
 // -Crie uma variável com o valor inicial igual a 2148. Esse valor não deve ser alterado.
 console.log('=================== Resultado do Passo 1 ===============')
 const numero2148 = 2148
@@ -30,3 +30,13 @@ semValor = semValor**2
 console.log(semValor)
 semValor = semValor/3
 console.log(semValor)
+
+// ### 2 - Crie duas variáveis booleanas de valores iniciais distintos. Imprima na tela o resultado das operações _AND_ e _OR_ entre elas. Depois disso, crie uma terceira variável booleana, com o valor de sua escolha. Imprima na tela o resultado das operações _AND_ e _OR_ para as três variáveis disponíveis.
+
+const var1 = true
+const var2 = false
+const var3 = null
+
+console.log(var1 && var2)
+console.log(var1 || var2)
+console.log(var1 && var2 || var3)
