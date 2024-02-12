@@ -57,10 +57,11 @@ converteParaFerenheit(34)
 // etiqueta e registre na tela a frase:
 // O valor a ser pago é x (sendo x o resultado do acréscimo dos impostos sobre o valor inicial).
 
-function caulculaImposto(p) {
-    const valorParaSerPago = p + (8.875/100)
+function caulculaImposto(inposto,precoProduto) {
+    const taxa = inposto/100 + 1
+    const valorParaSerPago = taxa * precoProduto
     console.log(`O valor a ser pago é ${valorParaSerPago}`)
 }
 
-caulculaImposto(10)
+caulculaImposto(8.875,150)
 
