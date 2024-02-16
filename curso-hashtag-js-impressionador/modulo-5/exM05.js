@@ -5,7 +5,7 @@
 // compra for maior ou igual a R$ 100, o cliente recebe um desconto de 10%. Caso contrário, nenhum desconto
 // é aplicado. O programa deve imprimir mensagens que retornem o se o cliente possui ou não o direito de
 // retorno e o valor da compra no console.
-console.log("=============== resolução ex01===========================")
+console.log("=============== resolução ex01 ===========================")
 
 function verificaDesconto(valorCompra) {
     if (valorCompra >= 100) {
@@ -25,10 +25,10 @@ verificaDesconto(250)
 // Escreva um programa verificarEstoque que verifica se um produto está em estoque com base na quantidade
 // disponível. Se a quantidade disponível for maior que zero, exiba "Produto disponível", caso contrário, exiba
 // "Produto esgotado" no console
-console.log("=============== resolução ex02===========================")
+console.log("=============== resolução ex02 ===========================")
 
 function verificaEstoque(produto) {
-    if(produto > 0) {
+    if (produto > 0) {
         console.log(`O produto  está disponivel `)
     } else {
         console.log(`O produto  está indisponivel `)
@@ -43,18 +43,56 @@ verificaEstoque(quantidade)
 // pontuação de fidelidade, que será entre 0 e 100. Se a pontuação for maior ou igual a 85, o cliente é
 // categorizado como "Cliente Premium". Se for maior ou igual a 50, é categorizado como "Cliente Regular".
 // Caso contrário, é categorizado como "Cliente Comum".
-console.log("=============== resolução ex03===========================")
+console.log("=============== resolução ex03 ===========================")
 
 function categoriaCliente(pontuacao) {
-    if(pontuacao >= 85){
+    if (pontuacao >= 85) {
         console.log("cliente premium")
-    }else if (pontuacao >= 50){
+    } else if (pontuacao >= 50) {
         console.log("cliente regular")
-    }else {
+    } else {
         console.log("cliente comum")
     }
 }
 
 const pontuacao = 85
 categoriaCliente(pontuacao)
+
+// Exercício 4: Classificação de Desempenho de Vendas:
+// Você está gerenciando uma equipe de vendedores e deseja avaliar o desempenho de cada vendedor com
+// base em suas vendas mensais em relação a uma meta estabelecida. Escreva um programa
+// desempenhoIndividualDeVendas que determine a categoria de desempenho de um vendedor com base no
+// percentual alcançado em relação à meta. As categorias incluem "Excelente Desempenho" (para vendedores
+// que alcançaram ou excederam a meta), "Muito Bom Desempenho" (para vendedores com vendas entre 90% e
+// 99% da meta), "Bom Desempenho" (para vendedores com vendas entre 80% e 89% da meta), "Desempenho
+// Satisfatório" (para vendedores com vendas entre 61% e 79% da meta) e "Desempenho Insatisfatório" (para
+// vendedores com vendas abaixo de 60% da meta). Execute o código e informe a categoria de desempenho do
+// vendedor com base nas vendas mensais e na meta de vendas estabelecida.
+
+console.log("=============== resolução ex04 ===========================")
+
+
+let meta = 0
+function desempenhoIndividualDeVenda(meta){
+    if (meta < 100) {
+        console.log("Excelente Desempenho")
+    } else if (meta >= 90) {
+        console.log("Muito Bom Desempenho")
+    }else if (meta >= 80) {
+        console.log("Bom Desempenho")
+    }else if (meta >= 61) {
+        console.log("Desempenho Satisfatório")
+    }else {
+        console.log("Desempenho Insatisfatório")
+    }
+}
+
+
+function calculaMeta(metaVendas, vendeu) {
+    meta = (vendeu/metaVendas) * 100
+    console.log(`${meta}%`)
+}
+
+calculaMeta(1000,90)
+desempenhoIndividualDeVenda(meta)
 
