@@ -99,9 +99,23 @@ desempenhoIndividualDeVenda(meta)
 // retorna true se o veículo estiver dentro do limite de velocidade (limite igual ou inferior a 80 km/h) e false caso
 // contrário, utilizando o operador ternário.
 
+console.log("=============== resolução ex05 ===========================")
 function verificarVelocidade(velocidade) {
     const dentroDoLimite = velocidade <= 80 ?  "dentro do limte" : "acima do limte"
     console.log(dentroDoLimite) 
 }
 
 verificarVelocidade(100)
+
+// Exercício 6: Semáforo de Trânsito:
+// Crie uma função mensagemSemaforo que recebe uma cor de semáforo como argumento (por exemplo,
+// "vermelho", "amarelo" ou "verde") e retorna uma mensagem indicando a ação a ser tomada com base na cor
+// do semáforo. Utilize o operador ternário para determinar a mensagem.
+console.log("=============== resolução ex06 ===========================")
+
+function mensagemSemaforo(cor) {
+    const mensagem =  cor === "vermelho" ? "pare" : cor === "amarelo" ? "atenção" : "siga"
+    console.log(mensagem)
+}
+
+mensagemSemaforo("verde")
