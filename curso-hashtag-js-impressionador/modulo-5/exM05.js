@@ -71,28 +71,37 @@ categoriaCliente(pontuacao)
 
 console.log("=============== resolução ex04 ===========================")
 
-
 let meta = 0
-function desempenhoIndividualDeVenda(meta){
-    if (meta < 100) {
+function desempenhoIndividualDeVenda(meta) {
+    if (meta > 100) {
         console.log("Excelente Desempenho")
     } else if (meta >= 90) {
         console.log("Muito Bom Desempenho")
-    }else if (meta >= 80) {
+    } else if (meta >= 80) {
         console.log("Bom Desempenho")
-    }else if (meta >= 61) {
+    } else if (meta >= 61) {
         console.log("Desempenho Satisfatório")
-    }else {
+    } else {
         console.log("Desempenho Insatisfatório")
     }
 }
 
-
 function calculaMeta(metaVendas, vendeu) {
-    meta = (vendeu/metaVendas) * 100
+    meta = (vendeu / metaVendas) * 100
     console.log(`${meta}%`)
 }
 
-calculaMeta(1000,90)
+calculaMeta(1000, 90)
 desempenhoIndividualDeVenda(meta)
 
+// Exercício 5: Verificação de Velocidade:
+// Crie uma função chamada verificarVelocidade que recebe a velocidade de um veículo como argumento e
+// retorna true se o veículo estiver dentro do limite de velocidade (limite igual ou inferior a 80 km/h) e false caso
+// contrário, utilizando o operador ternário.
+
+function verificarVelocidade(velocidade) {
+    const dentroDoLimite = velocidade <= 80 ?  "dentro do limte" : "acima do limte"
+    console.log(dentroDoLimite) 
+}
+
+verificarVelocidade(100)
