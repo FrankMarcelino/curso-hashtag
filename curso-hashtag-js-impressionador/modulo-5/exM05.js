@@ -16,11 +16,7 @@ function verificaDesconto(valorCompra) {
     }
 }
 
-
 verificaDesconto(250)
-
-
-
 // Exercício 2: Verificação de Produto em Estoque:
 // Escreva um programa verificarEstoque que verifica se um produto está em estoque com base na quantidade
 // disponível. Se a quantidade disponível for maior que zero, exiba "Produto disponível", caso contrário, exiba
@@ -101,8 +97,8 @@ desempenhoIndividualDeVenda(meta)
 
 console.log("=============== resolução ex05 ===========================")
 function verificarVelocidade(velocidade) {
-    const dentroDoLimite = velocidade <= 80 ?  "dentro do limte" : "acima do limte"
-    console.log(dentroDoLimite) 
+    const dentroDoLimite = velocidade <= 80 ? "dentro do limte" : "acima do limte"
+    console.log(dentroDoLimite)
 }
 
 verificarVelocidade(100)
@@ -114,8 +110,33 @@ verificarVelocidade(100)
 console.log("=============== resolução ex06 ===========================")
 
 function mensagemSemaforo(cor) {
-    const mensagem =  cor === "vermelho" ? "pare" : cor === "amarelo" ? "atenção" : "siga"
+    const mensagem = cor === "vermelho" ? "pare" : cor === "amarelo" ? "atenção" : "siga"
     console.log(mensagem)
 }
 
 mensagemSemaforo("verde")
+
+// Exercício 7: Prioridade no Trânsito:
+// Crie uma função chamada coresDoSemaforo que recebe uma cor de semáforo como argumento (por
+// exemplo, "vermelho", "amarelo" ou "verde") e retorna uma mensagem indicando se é seguro passar ou se é
+// necessário parar
+console.log("=============== resolução ex07 ===========================")
+let mensagemTransito
+function coresDoSemaforo(cor) {
+    switch (cor) {
+        case 'vermelho':
+            mensagemTransito = 'pare'
+            break
+        case 'amarelo':
+            mensagemTransito = 'atenção'
+            break
+        case 'verde':
+            mensagemTransito = 'siga'
+            break
+        
+    }
+
+    console.log(mensagemTransito)
+}
+
+coresDoSemaforo('verde')
