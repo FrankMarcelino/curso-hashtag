@@ -78,5 +78,32 @@ movimentoCaixa(4)
 movimentoCaixa(5)
 fechaCaixa()
 
+// Exercício 4: Entrega de Pedidos Pendentes:
+//  Você é o entregador de uma lanchonete e precisa entregar pedidos até que não haja mais pedidos
+//  pendentes. Crie um programa que simule a entrega de pedidos até que não haja mais pedidos na lista
+console.log("=============== resolução ex04 ===========================")
 
+const pedidos = []
 
+function addPedido(pedido, endereco)  {
+    const novoPedido = {
+        pedido: pedido,
+        endereco: endereco
+    }
+    pedidos.push(novoPedido)
+
+}
+
+addPedido("hambuguer", "juazeiro")
+addPedido("hambuguer", "crato")
+addPedido("hambuguer", "barbalha")
+let entregue = pedidos.length
+let contagem = 1
+function entregarPedidos(){
+    while(entregue > 0) {
+        console.log(`Entreguei o pedido ${contagem}`)
+        contagem++
+        entregue-- 
+    }
+}
+entregarPedidos()
