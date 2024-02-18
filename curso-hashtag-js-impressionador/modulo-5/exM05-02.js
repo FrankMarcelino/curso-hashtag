@@ -29,13 +29,54 @@ valorTotalHamburgeres()
 // Você deseja criar um cardápio digital para sua lanchonete. Crie um programa que liste os itens do cardápio
 // juntamente com seus preços. Utilize um loop for para percorrer o cardápio e exibi-lo
 console.log("=============== resolução ex02 ===========================")
-const pratos = ["hamburguer", "batata", "sorvete", "suco", "refrigerante"]
-const valores = [16, 5, 7, 8,6 ]
 
-function cardapioDigital(pratos, valores) {
-    for (i = 0; i < pratos.length; i++){
-        console.log(`${pratos[i]} R$ ${valores[i]}`)
+const cardapio = [
+    { nome: "hamburguer", valor: 16 },
+    { nome: "batata", valor: 5 },
+    { nome: "sorvete", valor: 7 },
+    { nome: "suco", valor: 8 },
+    { nome: "refrigerante", valor: 6 }
+
+]
+
+function cardapioDigital(cardapio) {
+    for (i = 0; i < cardapio.length; i++) {
+        console.log(`${cardapio[i].nome} R$ ${cardapio[i].valor}`)
     }
 }
 
-cardapioDigital(pratos, valores)
+cardapioDigital(cardapio)
+
+// Estrutura de Repetição - WHILE:
+
+// Exercício 3: Contagem de Dinheiro no Caixa:
+
+// Você é o caixa de uma lanchonete e precisa contar o dinheiro recebido até que a última venda do dia seja
+// feita. Crie um programa que simule a contagem do dinheiro recebido a cada venda até o fechamento da
+// lanchonete
+console.log("=============== resolução ex03 ===========================")
+
+let caixa = []
+function fechaCaixa() {
+    let fechamentoCaixa = 0
+    let movimentoCaixa = 0
+    while(movimentoCaixa < caixa.length){
+        fechamentoCaixa = fechamentoCaixa + caixa[movimentoCaixa]
+        movimentoCaixa++
+    }
+    console.log(`valor no caixa ${fechamentoCaixa}`)
+}
+
+
+function movimentoCaixa(valor) {
+    caixa.push(valor)
+}
+
+movimentoCaixa(1)
+movimentoCaixa(3)
+movimentoCaixa(4)
+movimentoCaixa(5)
+fechaCaixa()
+
+
+
