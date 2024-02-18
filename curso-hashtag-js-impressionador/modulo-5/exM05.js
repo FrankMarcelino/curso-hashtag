@@ -133,10 +133,51 @@ function coresDoSemaforo(cor) {
         case 'verde':
             mensagemTransito = 'siga'
             break
-        
+        default:
+            mensagemTransito = 'Cor deconhecida!'
     }
 
     console.log(mensagemTransito)
 }
 
 coresDoSemaforo('verde')
+
+// Exercício 8: Verificação de Placa de Veículo:
+//  Crie uma função verificarPlaca que recebe o último dígito da placa de um veículo como argumento (um
+//  número de 0 a 9) e retorna uma mensagem indicando o mês de pagamento do licenciamento do veiculo, com base no último
+//  dígito da placa
+console.log("=============== resolução ex08 ===========================")
+let mensagemDataDePagameto
+function verificaPlaca(ultimoDigito) {
+    switch (ultimoDigito) {
+        case 1:
+        case 2:
+            mensagemDataDePagameto = "Final de placa 1 e 2 - Até 31/07."
+            break
+        case 3:
+        case 4:
+            mensagemDataDePagameto = "Final de placa 3 e 4 - Até 31/08."
+            break
+        case 5:
+        case 6:
+            mensagemDataDePagameto = "Final de placa 5 e 6 - Até 31/09."
+            break
+        case 7:
+        case 8:
+            mensagemDataDePagameto = "Final de placa 7 e 8 - Até 31/10."
+            break
+        case 9:
+        case 10:
+            mensagemDataDePagameto = "Final de placa 9 e 10 - Até 31/11."
+            break
+        case 0:
+            mensagemDataDePagameto = "Final de placa 0 - Até 31/12."
+            break
+        default:
+            mensagemDataDePagameto = 'final desconhecido'
+
+    }
+    console.log(mensagemDataDePagameto)
+}
+
+verificaPlaca(3)
