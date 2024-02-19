@@ -41,12 +41,11 @@ function simuladorVendas() {
 
 simuladorVendas()
 
-
 function calculaValorTotalVendas(vendasDiarias, hambuguerValor, dia) {
 
-    if (dia >=  vendasDiarias.length) {
+    if (dia >= vendasDiarias.length) {
         return 0
-    } 
+    }
 
     const valorVendaDiaAtual = vendasDiarias[dia] * hambuguerValor
     const valorDoProximoDia = calculaValorTotalVendas(vendasDiarias, hambuguerValor, dia + 1)
@@ -57,4 +56,46 @@ function calculaValorTotalVendas(vendasDiarias, hambuguerValor, dia) {
 const totalVendasMes = calculaValorTotalVendas(vendasDiarias, hambuguerValor, 0)
 
 console.log(totalVendasMes)
+
+// FOR IN:
+
+// Exercício 3: Listagem de Itens do Cardápio:
+// Você é o gerente de uma lanchonete e deseja listar os itens do cardápio para exibição. Os itens do cardápio
+// são armazenados em um objeto onde as chaves são os nomes dos itens e os valores são os preços. Crie um
+// programa que use um loop for...in para listar todos os itens do cardápio juntamente com seus preços
+
+console.log("=============== resolução ex03 ===========================")
+const cardapioOnline = {
+    hamburger: "16",
+    batata: "7",
+    suco: "6",
+    refrigerante: "8",
+}
+
+for (info in cardapioOnline) {
+    console.log(`${info} ---- R$${cardapioOnline[info]}`)
+}
+
+
+// Exercício 4: Calcular o Total da Conta:
+// Você é o caixa de uma lanchonete e deseja calcular o total da conta com base nos itens pedidos por um
+// cliente. Crie um programa que use um loop for...in para percorrer o pedido do cliente (um objeto com itens e
+// quantidades) e calcule o valor total da conta
+console.log("=============== resolução ex04 ===========================")
+
+
+
+const comanda = {
+    hambuguer: 16,
+    batatas: 7,
+    refrigerante: 4,
+    sucos: 3,
+}
+let totalConta = 0
+
+for(item in comanda){
+    totalConta += comanda[item]
+}
+
+console.log(`valor total da conta foi de R$ ${totalConta}`)
 
