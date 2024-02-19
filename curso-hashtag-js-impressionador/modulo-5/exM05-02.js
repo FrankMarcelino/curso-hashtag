@@ -107,3 +107,40 @@ function entregarPedidos(){
     }
 }
 entregarPedidos()
+
+// Estrutura de Repetição - DO...WHILE:
+
+// Exercício 5: Adivinhe o Número Secreto para Desconto:
+// Você deseja criar um programa que permite aos clientes da sua lanchonete adivinharem um número secreto
+// para ganhar um desconto. Eles podem tentar quantas vezes quiserem, mas só ganharão o desconto quando
+// adivinharem o número secreto. Crie um programa que use a estrutura do...while para permitir que os clientes
+// tentem adivinhar o número secreto
+
+console.log("=============== resolução ex05 ===========================")
+const numeroSecreto = 10    
+
+function chuteNumero(numero) {
+    do {
+        numero === numeroSecreto ? console.log("Você acertou!!") : console.log("você errou, tente mais uma vêz..")
+    }while(numero === numeroSecreto)
+}
+
+chuteNumero(1)
+
+// Exercício 6: Gerenciamento de Estoque de Itens em Falta:
+// Você é o gerente de uma lanchonete e está verificando o estoque de itens em falta. Crie um programa que
+// permita que você insira os itens que estão em falta e os adicione ao estoque até que você decida encerrar o
+// processo
+console.log("=============== resolução ex06 ===========================")
+
+const intensLachonete = []
+let encerrarPrograma = ""
+function inserirItenFaltante(iten,comandoParaEncerrarPrograma) {
+    do {
+        intensLachonete.push(iten)
+        encerrarPrograma = comandoParaEncerrarPrograma
+    }while(encerrarPrograma === "sair")
+    console.log(intensLachonete)
+}
+
+inserirItenFaltante('carne','continuar')
