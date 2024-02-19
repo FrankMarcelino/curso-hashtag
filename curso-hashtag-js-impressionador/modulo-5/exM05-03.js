@@ -8,6 +8,7 @@
 // Você é o gerente de uma lanchonete e deseja contar quantos itens diferentes estão no seu cardápio. Crie uma
 // função recursiva em JavaScript que conte quantos itens diferentes existem no cardápio da lanchonete
 console.log("=============== resolução ex01 ===========================")
+
 const itensLachonete = ["hamburguer", "salada", "batata", "refrigerante", "sucos"]
 
 
@@ -93,9 +94,40 @@ const comanda = {
 }
 let totalConta = 0
 
-for(item in comanda){
+for (item in comanda) {
     totalConta += comanda[item]
 }
 
 console.log(`valor total da conta foi de R$ ${totalConta}`)
+
+// FOR OF:
+
+// Exercício 5: Listagem de Itens do Cardápio:
+// Reutilizando o cardápio da lanchonete armazenado em um array do exercício 1, crie um programa que use
+// um loop for...of para listar todos os itens do cardápio.
+console.log("=============== resolução ex05 ===========================")
+const testeItensLachonete = ["hamburguer", "salada", "batata", "refrigerante", "sucos"]
+for (nomeItens of testeItensLachonete) {
+    console.log(nomeItens)
+}
+
+// Exercício 6: Calcular o Total da Conta
+// Você é o caixa de uma lanchonete e deseja calcular o total da conta com base nos itens pedidos por um
+// cliente. Os itens do pedido estão armazenados em um array de objetos, onde cada objeto tem o nome do
+// item e a quantidade. Crie um programa que use um loop for...of para percorrer o pedido do cliente e calcule o
+// valor total da conta
+console.log("=============== resolução ex06 ===========================")
+
+const pedido = [
+    {nome: 'hamburer', quantidade:2, valor: 32},
+    {nome: 'suco', quantidade:2, valor: 14}
+]
+
+
+let totalConta6 = 0
+for (i in pedido) {
+    totalConta6 += pedido[i].valor
+}
+
+console.log(totalConta6)
 
