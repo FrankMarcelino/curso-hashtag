@@ -28,3 +28,4 @@ function revelaImagem() {
   function ocutaImagemMisteriosa() {
     imgMisteriossa.setAttribute('src','imagem1.png')
   }
+
