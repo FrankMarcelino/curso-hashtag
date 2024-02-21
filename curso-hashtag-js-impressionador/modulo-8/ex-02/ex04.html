@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px
+        }
+    </style>
+</head>
+<body>
+    <h1>Prevenir Rolagem para Baixo e Remover Event Listener</h1>
+    <script>
+        let numberPressArrowDown = 0
+
+        function preventScroll(event){
+            if(event.key === 'ArrowDown'){
+                numberPressArrowDown += 1
+                event.preventDefault();
+                console.log(numberPressArrowDown)
+            }
+            if(numberPressArrowDown === 10){
+                document.removeEventListener('keydown', preventScroll)
+            }
+        }
+
+        document.addEventListener('keydown', preventScroll)
+    </script>
+</body>
+</html>
