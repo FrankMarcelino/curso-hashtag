@@ -65,7 +65,7 @@ function tratarErroAcessarPropriedadeNull() {
 // erro personalizada usando console.error(). Esta mensagem deve informar que ocorreu um erro ao tentar
 // acessar uma propriedade que não existe no objeto e incluir o erro capturado na mensagem de erro.
 
-let objeto = {};
+const objeto1 = {};
 function tratarErroPropriedadeInexistente() {
     try {
         objeto.propriedade;
