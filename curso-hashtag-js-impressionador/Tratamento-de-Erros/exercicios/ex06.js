@@ -17,6 +17,7 @@ function tratarErroDivisaoPorZero() {
         if (divisor === 0) {
             throw new Error("A divisão por zero não pode ser permitida");
         }
+        console.log("O resultado da divisão e: " + resultado);
     } catch (error) {
         console.error("Ocorreu um erro ao tentar realizar uma divisão por zero: " + error);
     }
