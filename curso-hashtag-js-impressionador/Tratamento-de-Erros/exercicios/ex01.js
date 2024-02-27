@@ -12,10 +12,11 @@
 
 function tratarErroVariavelNaoDefinida()    {
     try {
-        variavelNaoDefinida;
+        console.log(variavelNaoDefinida);
     } catch (error) {
         console.error("Ocorreu um erro ao tentar acessar uma variável não definida: " + error);
     }
 }
 
+// const variavelNaoDefinida = 0;
 tratarErroVariavelNaoDefinida();
