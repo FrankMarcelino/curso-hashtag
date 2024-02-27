@@ -16,4 +16,8 @@ function tratarErroFuncaoInexistente() {
     }
 }
 
+// function funcaoInexistente() {
+//     console.log("Função inexistente");
+// }
+
 tratarErroFuncaoInexistente()
